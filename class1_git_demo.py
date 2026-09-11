@@ -1,1 +1,1 @@
-dhwqeq
+print(10)
