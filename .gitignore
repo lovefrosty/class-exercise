@@ -13,6 +13,8 @@ __pycache__/
 *.pyc
 .venv/
 venv/
+*.txt
+!requirements.txt
 
 # IDE settings & Secrets
 .vscode/
