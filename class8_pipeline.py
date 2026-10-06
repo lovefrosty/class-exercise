@@ -1,7 +1,6 @@
 import logging
 from pathlib import Path
-from class8_data_loader import load_netflix
-from class8_data_validator import require_columns
+from class8_src import load_netflix, required_cols
 
 logging.basicConfig(
     level=logging.INFO,
@@ -15,7 +14,7 @@ def main():
 
     try:
         df = load_netflix(input_path)
-        require_columns(df, ["title", "type", "release_year"])
+        df = required_cols(df, ["title", "type", "release_year"])
     except ValueError:
         raise SystemExit(1)
 
